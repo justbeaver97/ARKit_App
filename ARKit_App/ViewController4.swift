@@ -12,13 +12,10 @@ import ARKit
 class ViewController4: UIViewController {
 
     @IBOutlet var arView: ARView!
-    
-    var distance = Int()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("distance: \(distance)")
+        print("ViewController4")
     }
 
     override func viewDidAppear(_ animated: Bool) {

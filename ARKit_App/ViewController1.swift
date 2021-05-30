@@ -12,7 +12,7 @@ class ViewController1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("ViewController1")
     }
 
     @IBAction func onClick_AR(_ sender: Any) {
@@ -23,9 +23,6 @@ class ViewController1: UIViewController {
     
     @IBAction func onClick_3D(_ sender: Any) {
         guard let googleURL = URL(string: "http://www.hanssem.store") else { return }
-        //http://www.hanssem.store
-        //https://google.com
-            
         let safariVC = SFSafariViewController(url: googleURL)
         present(safariVC, animated: true, completion: nil)
     }

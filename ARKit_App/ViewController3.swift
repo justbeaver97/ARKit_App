@@ -26,7 +26,7 @@ final class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ViewController3")
         // Set the view's delegate
         sceneView.delegate = self
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
@@ -37,6 +37,7 @@ final class ViewController3: UIViewController {
         let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController4")
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName!, animated: true, completion: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +87,7 @@ final class ViewController3: UIViewController {
             pow(endPosition.y - startPosition.y, 2) +
             pow(endPosition.z - startPosition.z, 2)
         )
+        print(distance*100,"cm")
         let textFormatted = String(format: "%.2f", (abs(distance * 100))) + " cm"
         updateText(text: textFormatted, atPosition: endPosition)
     }

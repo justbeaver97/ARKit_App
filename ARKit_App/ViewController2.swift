@@ -15,7 +15,7 @@ class ViewController2: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        print("ViewController2")
         arView.session.delegate = self
         
         setupARView()

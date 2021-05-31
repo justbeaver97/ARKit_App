@@ -1,21 +1,19 @@
 //
-//  ViewController3.swift
+//  ViewController6.swift
 //  ARKit_App
 //
-//  Created by 저스트비버 on 2021/05/28.
+//  Created by 저스트비버 on 2021/05/31.
 //
-//  From AR-Ruler-Main
-//  reference: https://github.com/jessangel79/AR-Ruler
 
 import UIKit
 import SceneKit
 import ARKit
 
-final class ViewController3: UIViewController {
+final class ViewController6: UIViewController {
     
     // MARK: - Outlets
-    
-    @IBOutlet private var sceneView: ARSCNView!
+
+    @IBOutlet weak var sceneView: ARSCNView!
     
     // MARK: - Properties
     
@@ -28,20 +26,18 @@ final class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewController3")
+        print("ViewController6")
         // Set the view's delegate
         sceneView.delegate = self
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-        
     }
     
-//    @IBAction func onClick_Placement(_ sender: Any) {
-//        print("public_distance: :",public_distance)
-//        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController4")
-//        vcName?.modalTransitionStyle = .coverVertical
-//        self.present(vcName!, animated: true, completion: nil)
-//        
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ViewController7 {
+            let nextVC = segue.destination as? ViewController7
+            nextVC?.public_distance = public_distance
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,7 +114,7 @@ final class ViewController3: UIViewController {
 
 // MARK: - ARSCNViewDelegateMethods
 
-extension ViewController3: ARSCNViewDelegate {
+extension ViewController6: ARSCNViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         refreshDotNodes()

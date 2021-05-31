@@ -15,11 +15,11 @@ class ViewController1: UIViewController {
         print("ViewController1")
     }
 
-    @IBAction func onClick_AR(_ sender: Any) {
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController2")
-        vcName?.modalTransitionStyle = .coverVertical
-        self.present(vcName!, animated: true, completion: nil)
-    }
+//    @IBAction func onClick_AR(_ sender: Any) {
+//        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController2")
+//        vcName?.modalTransitionStyle = .coverVertical
+//        self.present(vcName!, animated: true, completion: nil)
+//    }
     
     @IBAction func onClick_3D(_ sender: Any) {
         guard let googleURL = URL(string: "http://www.hanssem.store") else { return }

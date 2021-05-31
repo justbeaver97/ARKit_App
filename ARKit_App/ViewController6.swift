@@ -88,7 +88,12 @@ final class ViewController6: UIViewController {
         )
         print(distance*100,"cm")
         public_distance = Int(distance*100)
-        let textFormatted = String(format: "%.2f", (abs(distance*100))) + " cm"
+        let textFormatted = String(format: "%.0f", (abs(distance*100))) + " cm"
+        if (public_distance > 50) {
+            showAlertAble()
+        } else {
+            showAlertUnAble()
+        }
         updateText(text: textFormatted, atPosition: endPosition)
     }
     
@@ -97,7 +102,7 @@ final class ViewController6: UIViewController {
         textGeometry.firstMaterial?.diffuse.contents = UIColor.red
         textNode = SCNNode(geometry: textGeometry)
         textNode.position = SCNVector3(position.x, position.y + 0.01, position.z)
-        textNode.scale = SCNVector3(0.01, 0.01, 0.01)
+        textNode.scale = SCNVector3(0.005, 0.005, 0.005)
         sceneView.scene.rootNode.addChildNode(textNode)
     }
     
@@ -109,6 +114,21 @@ final class ViewController6: UIViewController {
             dotNodes = [SCNNode]()
             textNode.removeFromParentNode()
         }
+    }
+    
+    func showAlertAble() {
+        let alert = UIAlertController(title: "", message: "배치가 가능합니다", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: { action in
+            print("tapped dismiss")
+        }))
+        present(alert, animated: true)
+    }
+    func showAlertUnAble() {
+        let alert = UIAlertController(title: "", message: "배치가 불가능합니다. 다른 장소를 선택하세요. (가구 길이: 30cm)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: { action in
+            print("tapped dismiss")
+        }))
+        present(alert, animated: true)
     }
 }
 

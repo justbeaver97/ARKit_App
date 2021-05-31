@@ -29,35 +29,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-M3-GA9">
-                                <rect key="frame" x="136" y="321" width="142" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="AR Viewer"/>
-                                <connections>
-                                    <segue destination="ddh-qP-615" kind="show" id="Jgd-SM-5MK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJe-sf-v2r">
-                                <rect key="frame" x="136" y="552" width="143" height="51"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Backgroud" translatesAutoresizingMaskIntoConstraints="NO" id="ekT-5A-MeK">
+                                <rect key="frame" x="-75" y="-83" width="551" height="1138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJe-sf-v2r">
+                                <rect key="frame" x="135" y="568" width="143" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="3D Viewer"/>
                                 <connections>
                                     <action selector="onClick_3D:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHD-Z3-5ml"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-M3-GA9">
+                                <rect key="frame" x="136" y="492" width="142" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="AR Viewer"/>
+                                <connections>
+                                    <segue destination="ddh-qP-615" kind="show" id="Jgd-SM-5MK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hanssem Furniture Viewer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-s5-2A1">
+                                <rect key="frame" x="27" y="661" width="361" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Symbol" translatesAutoresizingMaskIntoConstraints="NO" id="8Xc-Np-YLN">
+                                <rect key="frame" x="87" y="725" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dJe-sf-v2r" firstAttribute="top" secondItem="4a2-M3-GA9" secondAttribute="bottom" constant="180" id="4ZI-e3-trq"/>
-                            <constraint firstItem="4a2-M3-GA9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="6Pc-3E-Y9r"/>
-                            <constraint firstItem="dJe-sf-v2r" firstAttribute="top" secondItem="4a2-M3-GA9" secondAttribute="bottom" constant="180" id="JCk-mq-kYk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4a2-M3-GA9" secondAttribute="trailing" constant="136" id="fzV-6u-tLe"/>
-                            <constraint firstItem="4a2-M3-GA9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="g3M-Vm-OP4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dJe-sf-v2r" secondAttribute="bottom" constant="259" id="kLN-Nu-2BA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dJe-sf-v2r" secondAttribute="trailing" constant="135" id="syP-5n-tvE"/>
-                            <constraint firstItem="dJe-sf-v2r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="t7j-51-6bp"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xu3-D7-F8R"/>
                 </viewController>
@@ -79,7 +85,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-sp-dHH">
                                 <rect key="frame" x="146" y="798" width="122" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Distance"/>
+                                <state key="normal" title="거리 측정"/>
                                 <connections>
                                     <segue destination="dyV-g9-UQz" kind="show" id="fi6-sW-hmG"/>
                                 </connections>
@@ -121,7 +127,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j57-F2-JTe">
                                 <rect key="frame" x="134" y="787" width="146" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Placement"/>
+                                <state key="normal" title="배치 해보기"/>
                                 <connections>
                                     <segue destination="sqJ-b1-Oq7" kind="show" id="CeN-Io-2os"/>
                                 </connections>
@@ -296,6 +302,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Backgroud" width="1200" height="1800"/>
+        <image name="Symbol" width="4961" height="1961"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
